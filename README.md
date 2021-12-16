@@ -4,7 +4,7 @@ This is a study potofolio, included files from Bachelor's level study to Master'
 
 This repo is to be updated regularly when new study results are completed.
 
-The linked study repos and study info:
+Other study repos and study info:
 
 * Real Time and Embedded Data Systems (FYS4220)
 <https://github.com/Fangt-ing/FYS4220-Kun-Zhu.git>
