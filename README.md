@@ -14,6 +14,5 @@ Other study repos and study info:
 <https://github.com/Fangt-ing/IN3110-kunzh.git>
 <https://www.uio.no/studier/emner/matnat/ifi/IN4110/index-eng.html>
 
-* Health-Care-System using JAVA
+* (Health-Care-System using JAVA)<https://kurser.dtu.dk/course/02160>
 <https://github.com/Fangt-ing/Health-Care-System-02160-Agile-Object-oriented-Software-Development.git>
-<https://kurser.dtu.dk/course/02160>
