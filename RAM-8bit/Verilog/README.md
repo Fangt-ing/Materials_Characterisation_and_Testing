@@ -1,5 +1,7 @@
 # Verilog implementation for the 8 bit RAM
 
+Page is better to be viewed in "light" background.
+
 The Verilog implementation is done in structural model, down to the transistor level. The tool used for this implementation is [Active-HDL Student Edition - FPGA Simulation](https://www.aldec.com/en/products/fpga_simulation/active_hdl_student).
 
 ## Circuits design

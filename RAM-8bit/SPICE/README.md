@@ -1,5 +1,7 @@
 # SPICE simulation
 
+Page is better to be viewed in "light" background.
+
 The spice simulation is done with [AIM-Spice](http://www.aimspice.com/). In order to simulate with the files in this folder, one needs to understand the AIM-Spice.
 
 ## Circuit design
