@@ -1,0 +1,47 @@
+[aimspice]
+[description]
+698
+**nor test
+
+.include D:\ProgramFiles\AIM-Software\AIM-Spice\Canvas\gpdk90nm_tt.cir
+*.include D:\ProgramFiles\AIM-Software\AIM-Spice\project\andsub.txt
+*.include D:\ProgramFiles\AIM-Software\AIM-Spice\project\invertersub.txt
+.include D:\ProgramFiles\AIM-Software\AIM-Spice\project\norsub.txt
+
+.param mv = 1
+.param ln = 0.1u
+.param lp = 0.1u
+.param wn = 0.1u
+.param wp = 0.36u
+
+VDD1 vdd 0 mv
+
+*		     I1 I2 TimeDelay TRise TFall p.W  Periode)
+Vgate1 in1 0  mv  PULSE(0  mv   0ns  1pS   1pS   4nS	 8nS)
+Vgate2 in2 0  1.1  PULSE(0  1.1   0ns  1pS   1pS   3nS	 6nS)
+
+*in1 in2 out vdd vss norsub
+x1 in1 in2 out	vdd 0 norsub
+
+
+.plot V(in1) V(in2) V(out) ! 1.05
+.plot I(vdd1) ! 1.05
+[dc]
+2
+Vgate1
+0
+1
+0.0001
+Vgate1
+0
+1
+0.01
+[tran]
+0.000000001
+100ns
+X
+X
+0
+[ana]
+4 0
+[end]

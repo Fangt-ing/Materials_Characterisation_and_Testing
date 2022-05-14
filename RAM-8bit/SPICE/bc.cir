@@ -1,0 +1,77 @@
+[aimspice]
+[description]
+1566
+** bc
+* ports: in out rw addr
+VDD1 vdd 0 mv
+*VDD2 addr 0 1
+
+*.include D:\ProgramFiles\AIM-Software\AIM-Spice\Canvas\gpdk90nm_tt.cir
+*.include D:\ProgramFiles\AIM-Software\AIM-Spice\Canvas\gpdk90nm_ff.cir
+*.include D:\ProgramFiles\AIM-Software\AIM-Spice\Canvas\gpdk90nm_fs.cir
+*.include D:\ProgramFiles\AIM-Software\AIM-Spice\Canvas\gpdk90nm_ss.cir
+.include D:\ProgramFiles\AIM-Software\AIM-Spice\Canvas\gpdk90nm_sf.cir
+
+.include D:\ProgramFiles\AIM-Software\AIM-Spice\project\andsub.txt
+.include D:\ProgramFiles\AIM-Software\AIM-Spice\project\invertersub.txt
+.include D:\ProgramFiles\AIM-Software\AIM-Spice\project\norsub.txt
+
+.param time = 10p
+.param mv = 0.4
+.param ln = 0.1u
+.param lp = 0.1u
+.param wn = 0.1u
+.param wp = 0.36u
+
+*		     I1 I2 TimeDelay TRise TFall p.W  period)
+Vgate1 in 0  mv PULSE(0 mv 1ns time time 4nS 8nS)
+Vgate2 sel 0 mv PULSE(0 mv 1ns time time 3nS 6nS)
+Vgate3 rw 0  mv PULSE(0 mv 1ns time time 7nS 14nS)
+
+* in out vdd vss
+xno1 in nin vdd 0 invertersub
+xno2 rw nrw vdd 0 invertersub
+
+*   in  in out vdd vss
+xa11 sel in w11 vdd 0 andsub
+xa12 nrw in w12 vdd 0 andsub
+xa13 w11 w12 w13 vdd 0 andsub
+
+xa21 sel nin w21 vdd 0 andsub
+xa22 nrw nin w22 vdd 0 andsub
+xa23 w21 w22 w23 vdd 0 andsub
+
+* sr latch
+*   in  in out vdd vss
+xnr1 w13 w4 w3 vdd 0 norsub
+xnr2 w23 w3 w4 vdd 0 norsub
+
+* final and Gate
+*   in  in out vdd vss
+xa31 sel w4 w31 vdd 0 andsub
+xa32 rw w4 w32 vdd 0 andsub
+xa33 w31 w32 out vdd 0 andsub
+
+.plot V(in) V(rw) V(sel) V(out) ! 1.05
+.plot V(out) ! 1.05
+.plot I(VDD1) ! 1.05
+
+[dc]
+2
+Vgate1
+0
+1
+0.0001
+Vgate1
+0
+1
+0.01
+[tran]
+0.000000001
+100ns
+X
+X
+0
+[ana]
+4 0
+[end]

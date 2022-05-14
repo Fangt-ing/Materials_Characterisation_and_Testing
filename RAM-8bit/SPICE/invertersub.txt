@@ -1,0 +1,13 @@
+.subckt invertersub in out vdd vss
+
+*.param ln = 0.1u
+*.param lp = 0.1u
+*.param wn = 0.1u
+*.param wp = 0.36u
+*.param ld = 280n
+
+*    D   G  S   B
+xmp out in vdd vdd pmos1v l=lp w=wp
+xmn out in 0 0 nmos1v l=ln w=wn
+
+.ends

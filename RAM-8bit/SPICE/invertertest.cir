@@ -1,0 +1,46 @@
+[aimspice]
+[description]
+504
+**inverter test
+
+.include D:\ProgramFiles\AIM-Software\AIM-Spice\Canvas\gpdk90nm_tt.cir
+.include D:\ProgramFiles\AIM-Software\AIM-Spice\project\invertersub.txt
+
+.param mv = 1
+.param ln = 0.1u
+.param lp = 0.1u
+.param wn = 0.1u
+.param wp = 0.36u
+
+VDD1 vdd 0 mv
+
+*		     I1 I2 TimeDelay TRise TFall P.W      Periode)
+Vgate1 in 0  mv PULSE(0  mv   0ns  1pS   1pS   4nS	 8nS)
+
+* in out vdd vss invertersub 
+x1 in out vdd 0 invertersub
+
+.plot V(in) V(out)  ! 1.05
+.plot I(vdd1) ! 1.05
+
+
+
+[dc]
+2
+Vgate1
+0
+1
+0.0001
+Vgate1
+0
+1
+0.01
+[tran]
+0.000000001
+20ns
+X
+X
+0
+[ana]
+4 0
+[end]

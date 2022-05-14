@@ -1,0 +1,16 @@
+.subckt andsub in1 in2 out vdd vss
+
+* .param ld = 280n
+
+*    Drain Gate Source Bulk
+*    D   G  S   B
+xmp1 out w1 vdd vdd pmos1v l=lp w=wp
+xmn1 out w1 vss vss nmos1v l=ln w=wn
+
+xmp2 w1 in2 vdd vdd pmos1v l=lp w=wp
+xmp3 w1 in1 vdd vdd pmos1v l=lp w=wp
+
+xmn2 w1 in1 w2 w2 nmos1v l=ln w=wn
+xmn3 w2 in2 vss vss nmos1v l=ln w=wn
+
+.ends

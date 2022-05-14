@@ -1,0 +1,16 @@
+.subckt norsub in1 in2 out vdd vss
+
+*.param ln = 0.1u
+*.param lp = 0.1u
+*.param wn = 0.1u
+*.param wp = 0.36u
+*.param ld = 0.08u
+
+*    D   G   S   B
+xmp1 w1 in2 vdd vdd pmos1v l=lp w=wp
+xmp2 out in1 w1 w1 pmos1v l=lp w=wp
+
+xmn1 out in1 vss vss nmos1v l=ln w=wn
+xmn2 out in2 vss vss nmos1v l=ln w=wn
+
+.ends
