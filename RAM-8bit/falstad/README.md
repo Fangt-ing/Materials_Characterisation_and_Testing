@@ -1,6 +1,9 @@
 ### 8 bit RAM circuit design and simulation
 
+Page is better to be viewed in "light" background.
+
 ## How to start the simulation
+
 - step 1: open page [circuit simulation](https://www.falstad.com/circuit)
 
 - step 2: click on "File (on the top left corner) -> Import From Text..."
