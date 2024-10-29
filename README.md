@@ -15,6 +15,5 @@ Other study repos and study info:
 * [Health-Care-System using JAVA](https://kurser.dtu.dk/course/02160) <br />
 <https://github.com/Fangt-ing/Health-Care-System-02160-Agile-Object-oriented-Software-Development.git>
 
-* [RISC-V CV32E40S core for PMP](https://github.com/silabs-kun/core-v-verif) <br />
-<https://github.com/silabs-kun/core-v-verif/tree/cv32e40s/dev>
-
+* [RISC-V CV32E40S core for PMP](https://github.com/silabs-kun/core-v-verif/tree/cv32e40s/dev) <br />
+<https://github.com/silabs-kun/core-v-verif/tree/pmp_test/cv32e40s/tests/programs/custom/pmp>
