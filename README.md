@@ -1,6 +1,6 @@
-# The study reports potofolio
+# The study reports portfolio
 
-This is a study potofolio, included files from Bachelor's level study to Master's level.
+This is a study portfolio, included files from Bachelor's level study to Master's level.
 
 This repo is to be updated regularly when new study results are completed.
 
@@ -18,6 +18,5 @@ Other study repos and study info:
 * [RISC-V CV32E40S core for PMP](https://github.com/silabs-kun/core-v-verif/tree/cv32e40s/dev) <br />
 <https://github.com/silabs-kun/core-v-verif/tree/pmp_test/cv32e40s/tests/programs/custom/pmp>
 
-
-* [Augmented Reality for Exercises for Elderly People](A study project, on GitLab)
+* [Augmented Reality for Exercises for Elderly People](A study project, on GitLab) <br />
 <https://gitlab.com/jimvanlienden1/argame.git>
