@@ -17,3 +17,7 @@ Other study repos and study info:
 
 * [RISC-V CV32E40S core for PMP](https://github.com/silabs-kun/core-v-verif/tree/cv32e40s/dev) <br />
 <https://github.com/silabs-kun/core-v-verif/tree/pmp_test/cv32e40s/tests/programs/custom/pmp>
+
+
+* [Augmented Reality for Exercises for Elderly People](A study project, on GitLab)
+<https://gitlab.com/jimvanlienden1/argame.git>
